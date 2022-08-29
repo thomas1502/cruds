@@ -1,0 +1,811 @@
+*{
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+/* Clases para el menú */
+.header{
+    margin: auto;
+    margin-top: 20px;
+    width: 1000px;
+    /* font-family: 'Open Sans', Arial, sans-serif; */
+}
+
+ul, ol{
+    list-style: none;    
+}
+
+.nav li a{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 94, 47);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 18px;
+    display: block;
+}
+
+.nav li a:hover{
+    color: rgb(121, 159, 121); 
+}
+
+.nav > li {
+    float: left;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width: 140px;
+}
+
+.nav li:hover > ul{
+    display: block;
+}
+
+/* Clases para la división entre menú y main */
+
+.BackGroundMenu{
+    background-color: rgb(32, 29, 29);
+    width: auto;
+}
+
+.MenuDivision{
+    margin-top: 20px;
+    background-color: rgb(229, 229, 229);
+    width: auto;
+    height: 1px;    
+}
+
+/* Clases para main de la página */
+.info1{
+    margin-top: 125px;
+}
+
+.columna1-imagen-info1{
+    margin-left: 350px;
+}
+
+.columna1-titulo1-info1{
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 200px;   
+    width: auto;
+}
+
+.columna1-parrafo-info1{
+    margin-top: 5px;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 180px;   
+    width: 75%;
+    color: rgb(102, 109, 111);
+}
+
+.columna1-titulo2-info1{
+    margin-top: 15px;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 200px;   
+    width: auto;
+}
+
+.btnT{
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+
+.columna1-button-info1{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 112, 65);
+    padding: 10px 10px;
+
+    font-weight:bold;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 300px;      
+}
+
+.columna1-button-info1:hover{
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    margin-left: 285px;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 112, 65);
+}
+
+.columna2-imagen-info1{
+    margin-top: 50px;
+    margin-left: 110px;
+}
+
+/* Clases para el formulario de inicio */
+.titulo-form{
+    font-size: 28px;
+    margin-top: 100px;
+    margin-left: 120px;
+}
+
+.input-form{
+    width:100%;
+	height: 50px;
+	padding:3px 10px;
+	border: none;
+	border-radius:none;
+	background-color:rgb(238, 238, 238);
+	margin:8px 0;
+	display:inline-block;
+	font-size: 15px;
+    
+    margin-left: 120px;
+}
+
+.txtA-form{
+    width:100%;
+    height:auto;
+    border:none;
+    border-radius: none;
+    background-color:rgb(238, 238, 238);
+    margin: 8px 0;
+    resize:none;
+    display:block;
+    font-size: 15px;
+    padding: 25px 10px;
+    resize: both;
+
+    margin-left: 120px;
+}
+
+.btn-form{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 112, 65);
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 20px;
+
+    margin-left: 1110px;
+    margin-top: 12px;
+    border: 0px;
+}
+
+.btn-form:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 112, 65);
+}
+
+/* Clases para extras e imagen de fonfo */
+.background-index{
+    margin-top: 80px;
+    background-image: url(/Assets/Images/Inicio/Banner2-Meso.jpeg);
+    background-attachment: fixed;
+    background-size:cover;  
+    background-repeat: no-repeat;
+
+    height: 450px;
+    width: auto;
+}
+
+.vacio{
+    background-color: transparent;
+    width: auto;
+    height: 1px;  
+}
+
+.titulo-extras{
+    margin-top: 100px;
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;    
+}
+
+.txt-extras{
+    margin-top: 8px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.espacio-tit-txt{
+    margin-top: 50px;
+}
+
+.txt-extras:hover{
+    font-size: 35px;
+}
+
+/* Clases de información */
+.titulo-informacion{
+    margin-top: 60px;
+    font-size: 30px;
+    font-weight:bold;
+    text-align: center;
+    color: rgb(51, 51, 51);
+}
+
+.a1{
+    margin-left: -50px;
+}
+
+.a2{
+    margin-left: -8px;
+}
+
+.a3{
+    margin-left: 25px;
+}
+
+.a4{
+    margin-left: 65px;
+}
+
+.ajuste{
+    margin-top: 60px;
+    text-align: center;
+    padding: auto;
+    width: 300px;
+}
+
+/* Clases reglamentos */
+.titulo-reglamentos{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.img-reglamentos{
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Clases para carrusel de revista explora - C1 */
+.back-revista{    
+    background-color: rgb(1, 99, 59);
+    width: auto;
+    height: 940px;
+}
+
+.titulo-revista{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);    
+}
+
+.txt-revista{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);  
+
+    width: 775px;
+    margin-left: 375px;
+}
+
+.titulo-carrusel1{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(255,255,255);
+}
+
+.img-carrusel1{
+    margin-left: 500px;
+    width: 1000px;
+    margin-left: 50px;
+}
+
+.back{
+    width: 600px;
+    height: 700px;
+    margin-left: 450px;
+}
+
+.back:hover{
+    background-color: rgb(167, 191, 182);
+}
+
+/* Clases para Carrisel No. 2 */
+.titulo-news{
+    margin-top: 190px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.txt-news{
+    text-align: center;
+    margin-top: 5px;
+    width: 467px;
+    margin-left: 80px;
+    font-size: 16px;
+}
+
+.btn-news{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 112, 65);
+    padding: 5px 18px;
+
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 240px;
+}
+
+.btn-news:hover{
+    text-decoration: none;
+    padding: 8px 24px;
+    margin-top: 15px;
+    margin-left: 235px;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 112, 65);
+}
+
+/* Clases para Carrusel No. 3 */
+.carrusel3{
+    margin-top: 80px;
+    background-color: rgb(1, 99, 59);
+    width: auto;
+    height: 575px;
+}
+
+.titulo-empleo{
+    margin-top: 160px;
+    margin-left: 200px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+    width: 300px;
+}
+
+.txt-empleo{
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    width: 487px;
+    margin-left: 100px;
+}
+
+.info-empleo{
+    margin-top: 28px;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    margin-left: 250px;
+    width: 200px;
+}
+
+.btn-empleo{
+    background-color:rgb(255, 255, 255);
+    color: rgb(0, 112, 65);
+    padding: 5px 18px;
+
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 32px;
+    margin-left: 270px;
+}
+
+.btn-empleo:hover{
+    background-color:rgb(0, 112, 65);
+    color: rgb(0, 112, 65);
+
+    padding: 12px 22px;
+    margin-top: 25px;
+    margin-left: 265px;
+}
+
+.img1-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/C3-img1.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img2-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/C3-img2.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img3-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/c3-img3.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img4-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/c3-img4.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img5-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/C3-img5.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img6-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/C3-img1.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img7-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/c3-img3.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img8-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/C3-img7.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img9-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/C3-img4.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img10-C3{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel3/C3-img6.jpg);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+/* Clases sección de Redes Sociales */
+.titulo-redes{
+    margin-top: 70px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    color: rgb(51, 51, 51);
+
+    width: 360px;
+    margin-left: 250px;
+}
+
+.txt-redes{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+
+    width: 334px;
+    margin-left: 265px;
+}
+
+.extras-redes{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+
+    width: 150;
+    margin-left: 220px;
+}
+
+.img-redes{
+    margin-top: 15px;
+    width:auto;
+    margin-left: -55px;
+}
+
+.logos{
+    margin-top: 40px;
+    margin-left: 340px;
+}
+
+/* Clases para el pre-footer */
+.prefooter{
+    margin: auto;
+    margin-top: 0px;
+    padding: 60px;
+    width: auto;
+
+    background-color: rgb(3, 71, 50);
+}
+
+.images-prefooter{
+    text-align: center;
+}
+
+.imagen1-prefooter{
+    margin-top: 3px;
+    margin-left: 100px;
+}
+
+.imagen2-prefooter{
+    margin-top: 10px;
+}
+
+.imagen3-prefooter{
+    margin-top: 4px;
+}
+
+/* Clases para el footer  */
+.footer{
+    margin: auto;
+    margin-top: 40px;
+    width:auto;
+    background-color: rgb(255, 255, 255);
+
+    text-align: center;
+}
+
+.textofooter1{    
+    color: rgb(0, 94, 47);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.textofooter2{
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+    font-size: 11px;
+
+    margin-top: 15px;
+}
+
+a{
+    color: black;
+    text-decoration:none;
+}
+
+/* Clases para titulo de calendarios */
+.titulo-calendario{
+    margin-top: 60px;
+
+    text-align: center;
+    color: rgb(51, 51, 51);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Clases para imagenes de calendarios */
+.calendario-diario{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.calendario-finde{
+    margin-top: 104px;
+    margin-left: 29px;
+}
+
+.calendario-medicina{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.calendario-odontologia{
+    margin-top: 100px;
+    margin-left: 29px;
+}
+
+.calendario-maestria{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.div-footer{
+    margin-top: 80px;
+}
+
+/* Clases para apartado de noticias */
+.titulo-noticias{
+    margin-top: 60px;
+
+    text-align: center;
+    color: rgb(51, 51, 51);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.noticia1{
+    margin-top: 65px;
+    margin-left: 220px;
+    text-align: right;
+}
+
+.noticia2{
+    margin-top: 65px;
+    text-align: center;
+}
+
+.noticia3{
+    margin-top: 65px;
+    margin-left: -70px;
+    text-align: left;
+}
+
+.noticia4{
+    margin-top: 50px;
+    margin-left: 220px;
+    text-align: right;
+}
+
+.noticia5{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.noticia6{
+    margin-top: 30px;
+    margin-left: -70px;
+    text-align: left;
+}
+
+.noticia7{
+    margin-top: 50px;
+    margin-left: 220px;
+    text-align: right;
+}
+
+.noticia8{
+    margin-top: 37px;
+    text-align: center;
+}
+
+.noticia9{
+    margin-top: -75px;
+    margin-left: -70px;
+    text-align: left;
+}
+
+.entradasViejas{
+    margin-top: 32px;
+    font-size: 14px;
+    margin-left: 230px;
+    text-decoration: none;
+}
+
+.spacefooternews{
+    margin-top: 70px;
+}
+
+/* Clases para carrusel 2 */
+.img1-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img5.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img2-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img6.jpg);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img3-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img7.jpg);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img4-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img8.jpg);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img5-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img9.jpg);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img6-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img1.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img7-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img2.png);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img8-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img3.jpg);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img9-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img3.jpg);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.img10-C2{
+    margin-top: 80px;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Assets/Images/Inicio/Carrusel2/C2-img4.jpg);
+    height: 400px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+.titulo-carrusel2{
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    
+    width: 400px;    
+    text-align: center;
+}
+
+.txt-carrusel2{
+    font-size: 14px;
+    color: white;
+
+    margin-top: 15px;
+    width: 435px;
+    margin-left: 110px;
+    text-align: center;
+}
+
+.btn-carrusel2{
+    background-color:rgb(255, 255, 255);
+    color: rgb(0, 112, 65);
+    padding: 10px 15px;
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;    
+    border: 0px;
+}

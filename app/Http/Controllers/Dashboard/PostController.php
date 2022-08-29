@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePostPost;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -35,10 +36,11 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostPost $request)
     {
-        echo('Ya tengo asistencia, Thomas.');
-        //
+        echo "El titulo trae: ".$request->title;
+
+        Post::create($request->validated()); /* Llamando a la funcion de Create */
     }
 
     /**
