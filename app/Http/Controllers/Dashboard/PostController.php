@@ -41,6 +41,8 @@ class PostController extends Controller
         echo "El titulo trae: ".$request->title;
 
         Post::create($request->validated()); /* Llamando a la funcion de Create */
+        return back()->with('status','Muchas gracias, tu post fue creado con éxito'); /* Funciona para regresar a donde estabamos */
+        /* Si la sesion esta activa manda el mensaje */
     }
 
     /**
