@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePostPost;
-use App\Models\Post;
+use App\Http\Requests\StoreCategoryPost;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,10 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {    
-        $posts=Post::orderBy('created_at','desc')->cursorpaginate(5);    
+    {
+        $categorys=Category::orderBy('created_at','desc')->cursorpaginate(5);    
         /* $posts=Post::get(); */
-        echo view ('dashboard.post.index',['posts'=>$posts]);    
-        /* dd::$posts;  */   
+        echo view ('dashboard.category.index',['categorys'=>$categorys]);
     }
 
     /**
@@ -29,7 +28,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        echo view ('dashboard.post.create');
+        echo view ('dashboard.category.create');
         //
     }
 
@@ -39,22 +38,21 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostPost $request)
+    public function store(StoreCategoryPost $request)
     {
         echo "El titulo trae: ".$request->title;
 
-        Post::create($request->validated()); /* Llamando a la funcion de Create */
-        return back()->with('status','Muchas gracias, tu post fue creado con éxito'); /* Funciona para regresar a donde estabamos */
-        /* Si la sesion esta activa manda el mensaje */
+        Category::create($request->validated());
+        return back()->with('status','Muchas gracias, tu post fue creado con éxito');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Category $category)
     {
         //
     }
@@ -62,10 +60,10 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Category $category)
     {
         //
     }
@@ -74,10 +72,10 @@ class PostController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -85,10 +83,10 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Category $category)
     {
         //
     }
