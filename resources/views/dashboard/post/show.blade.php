@@ -16,18 +16,18 @@
 <body>
     <header >
         @include('dashboard.partials.nav-header-main')
-        <div class="titulo">INGRESO DE POST</div>
+        <div class="titulo">POST</div>
     </header>    
 
     <main>
         <form action="{{route('post.store')}}" method="post" class="justify-content-center">
-            @include('dashboard.partials.sesion-flash-status')    
+            @csrf   
 
             <div class="container">
                 <section class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <!-- <label for="">Titulo</label> -->
-                        <input type="text" name="title" class="input" placeholder="Título" value="{{old('title')}}">      
+                        <input type="text" name="title" class="input" placeholder="Título" value="{{$post->title}}" readonly>      
                         @error('title')
                             <small class="text-danger">
                                 {{$message}}
@@ -37,7 +37,7 @@
 
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <!-- <label for="">Url Corta</label> -->
-                        <input type="text" name="slug" class="input" placeholder="Url Corta" value="{{old('slug')}}">
+                        <input type="text" name="slug" class="input" placeholder="Url Corta" value="{{$post->slug}}" readonly>
                         @error('slug')
                             <small class="text-danger">
                                 {{$message}}
@@ -47,23 +47,18 @@
                     
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <!-- <label for="">Descripción</label> -->
-                        <textarea name="description" class="txtArea" placeholder="Descripción"></textarea>
+                        <textarea name="description" class="txtArea" placeholder="Descripción" readonly></textarea>
                     </div>
                     
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <!-- <label for="">Contenido</label> -->
-                        <textarea name="content" class="txtArea" placeholder="Contenido">{{old('content')}}</textarea>   
+                        <textarea name="content" class="txtArea" placeholder="Contenido" readonly>{{$post->content}}</textarea>   
                         @error('content')
                             <small class="text-danger">
                                 {{$message}}
                             </small>   
                         @enderror 
-                    </div>            
-                    
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <button type="submit" class="button btn-form">Enviar</button>  
-                    </div>                       
+                    </div>                      
                 </section>
             </div>                    
         </form>

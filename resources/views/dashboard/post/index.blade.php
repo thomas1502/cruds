@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 
     <title>Mi Primer Crud</title>
-</head>
+</head> 
 <body>
     <header >
         @include('dashboard.partials.nav-header-main')
@@ -21,7 +21,7 @@
 
     <main>
         <div class="container">
-            <table class="table table-striped">
+            <table class="table table-striped table-bordered">
                 <thead>
                     <tbody>
                         <tr>
@@ -62,6 +62,10 @@
                             </td>
                             <td>
                                 {{$post->updated_at->format('d-m-Y')}}
+                            </td>
+                            <td>
+                                <a href="{{route('post.show', $post->id)}}" class="btn btn-primary">Ver</a>
+
                             </td>
                         </tr>
                     @endforeach
