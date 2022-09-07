@@ -63,6 +63,9 @@
                             <td>
                                 {{$category->updated_at->format('d-m-Y')}}
                             </td>
+                            <td>
+                                <a href="{{route('category.show', $category->id)}}" class="btn btn-primary">Ver</a>
+                            </td>
                         </tr>
                     @endforeach
                 </thead>                

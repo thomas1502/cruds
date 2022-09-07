@@ -21,13 +21,13 @@
 
     <main>
     <form action="{{route('category.store')}}" method="post" class="justify-content-center">
-            @include('dashboard.partials.sesion-flash-status') 
+            @csrf   
 
             <div class="container">
                 <section class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <!-- <label for="">Titulo</label> -->
-                        <input type="text" name="title" class="input" placeholder=" Título" value="{{old('title')}}">      
+                        <input type="text" name="title" class="input" placeholder=" Título" value="{{$category->title}}" readonly>      
                         @error('title')
                             <small class="text-danger">
                                 {{$message}}
@@ -37,17 +37,13 @@
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <!-- <label for="">Url Corta</label> -->
-                        <input type="text" name="slug" class="input" placeholder=" Url Corta" value="{{old('slug')}}">
+                        <input type="text" name="slug" class="input" placeholder=" Url Corta" value="{{$category->slug}}" readonly>
                         @error('slug')
                             <small class="text-danger">
                                 {{$message}}
                             </small>   
                         @enderror 
-                    </div>      
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <button type="submit" class="button btn-form">Enviar</button>  
-                    </div>                       
+                    </div>                     
                 </section>
             </div>                    
         </form>

@@ -54,6 +54,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
+        echo view ('dashboard.category.show', ['category' => $category]);
         //
     }
 
