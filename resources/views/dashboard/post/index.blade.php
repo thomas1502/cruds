@@ -16,7 +16,7 @@
 <body>
     <header >
         @include('dashboard.partials.nav-header-main')
-        <a class="btn btn-primary" href="{{route('post.create')}}">Crear</a>
+        <a class="btn btn-success" href="{{route('post.create')}}">Crear</a>
     </header>    
 
     <main>
@@ -65,6 +65,12 @@
                             </td>
                             <td>
                                 <a href="{{route('post.show', $post->id)}}" class="btn btn-primary">Ver</a>
+                                <a href="{{route('post.edit', $post->id)}}" class="btn btn-primary">Editar</a>
+                                <form method="POST" action="{{ route('post.destroy', $post->id) }}">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button class="btn btn-danger" type="submit">Borrar</button>
+                                </form>                                
                             </td>
                         </tr>
                     @endforeach

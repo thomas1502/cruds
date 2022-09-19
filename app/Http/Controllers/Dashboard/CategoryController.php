@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreCategoryPost;
 use App\Models\Category;
+use App\Http\Requests\StoreCategoryPost;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -28,7 +28,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        echo view ('dashboard.category.create');
+        echo view ('dashboard.category.create', ['category' => new category()]);
         //
     }
 
@@ -67,6 +67,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         //
+        echo view ('dashboard.category.edit', ['category' => $category]);
     }
 
     /**
@@ -76,9 +77,10 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(StoreCategoryPost $request, Category $category)
     {
-        //
+        $category->update($request->validated()); 
+        return back()->with('status','Muchas gracias, tu post fue actualizado con éxito');
     }
 
     /**
@@ -89,6 +91,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return back()->with('status','POST borrado!');
     }
 }

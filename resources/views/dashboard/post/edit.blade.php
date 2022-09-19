@@ -16,12 +16,13 @@
 <body>
     <header >
         @include('dashboard.partials.nav-header-main')
-        <div class="titulo">INGRESO DE POST</div>
+        <div class="titulo">ACTUALIZAR POST</div>
     </header>    
 
     <main>
-        <form action="{{route('post.store')}}" method="post" class="justify-content-center">
-            @include('dashboard.partials._form')            
+        <form action="{{route('post.update', $post->id)}}" method="post" class="justify-content-center">
+            @method('PUT')
+            @include('dashboard.partials._form')
         </form>
     </main>
 
