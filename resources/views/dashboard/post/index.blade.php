@@ -66,18 +66,66 @@
                             <td>
                                 <a href="{{route('post.show', $post->id)}}" class="btn btn-primary">Ver</a>
                                 <a href="{{route('post.edit', $post->id)}}" class="btn btn-primary">Editar</a>
-                                <form method="POST" action="{{ route('post.destroy', $post->id) }}">
-                                    @method('DELETE')
-                                    @csrf
-                                    <button class="btn btn-danger" type="submit">Borrar</button>
-                                </form>                                
+                                <button  class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="{{ $post->id}}">Borrar</button>                             
                             </td>
                         </tr>
                     @endforeach
-                </thead>                
-            </table>  
-            {{$posts->links()}}        
+                </thead> 
+                {{$posts->links()}}    
+            </table> 
+            
+            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel">Alerta</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Estas seguro que deseas borrar este POST?
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <form method="POST" action="{{ route('post.destroy', $post->id) }}">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="btn btn-danger">Borrar</button>
+                            </form>                            
+                        </div>
+                    </div>
+                </div>
+            </div>      
         </div>
     </main>
 </body>
 </html>
+
+<script>
+const exampleModal = document.getElementById('deleteModal')
+exampleModal.addEventListener('show.bs.modal', event => {
+  // Button that triggered the modal
+  const button = event.relatedTarget
+  // Extract info from data-bs-* attributes
+  const recipient = button.getAttribute('data-id')
+  // If necessary, you could initiate an AJAX request here
+  // and then do the updating in a callback.
+  //
+  // Update the modal's content.
+  const modalTitle = exampleModal.querySelector('.modal-title')
+  const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+  modalTitle.textContent = `New message to ${recipient}`
+  modalBodyInput.value = recipent
+})
+</script>
+
+<!-- <script>
+    $(#deleteModal).on('show.bs.modal', function (event){
+        var button = $(event.relatedTarget);
+        var category = button.data('post');
+        var modal = $(this);
+        modal.find('.modal-body #post').val(post);
+    });
+</script> -->
